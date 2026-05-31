@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10233f" />
+    <title>Verita | Customer Onboarding</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="login-shell" id="login-screen">
+      <div class="login-panel">
+        <div class="brand">
+          <div class="brand-mark">V</div>
+          <div>
+            <strong>VERITA</strong>
+            <span>Trusted onboarding</span>
+          </div>
+        </div>
+        <div class="login-copy">
+          <p class="eyebrow">Beauxbatons Energy Retail</p>
+          <h1>One secure path from identity to activation.</h1>
+          <p>
+            A unified customer onboarding and KYC workspace for France and
+            Australia.
+          </p>
+        </div>
+        <button class="cerberus-button" id="login-button">
+          <span class="shield-icon">C</span>
+          Continue with Cerberus SSO
+        </button>
+        <p class="login-footnote">
+          Protected by Cerberus identity guardian · SAML 2.0 · Zero Trust
+        </p>
+      </div>
+      <aside class="login-aside">
+        <div class="security-card">
+          <span class="status-dot"></span>
+          <strong>All systems operational</strong>
+          <p>Encrypted, auditable and ready for regulated onboarding.</p>
+        </div>
+        <div class="aside-metric">
+          <span>Target automation</span>
+          <strong>70%</strong>
+        </div>
+        <div class="aside-metric">
+          <span>Markets</span>
+          <strong>FR · AU</strong>
+        </div>
+      </aside>
+    </section>
+
+    <div class="app-shell hidden" id="app-shell">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">
+          <div class="brand-mark">V</div>
+          <div>
+            <strong>VERITA</strong>
+            <span>Operations console</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="dashboard">
+            <span class="nav-icon">⌂</span> Dashboard
+          </button>
+          <button class="nav-item" data-view="cases">
+            <span class="nav-icon">▤</span> Onboarding cases
+          </button>
+          <button class="nav-item" data-view="reviews">
+            <span class="nav-icon">✓</span> Review queue
+            <b class="nav-badge" id="review-badge">3</b>
+          </button>
+          <button class="nav-item" data-view="governance">
+            <span class="nav-icon">◇</span> Data governance
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="environment">
+            <span class="status-dot"></span>
+            Production · Azure EU
+          </div>
+          <button class="profile-card" id="logout-button">
+            <span class="avatar">AM</span>
+            <span><strong>Amelia Martin</strong><small>Compliance lead</small></span>
+            <span>⋮</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="breadcrumb">Beauxbatons / Customer onboarding</p>
+            <h2 id="page-title">Operations overview</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" title="Notifications">◔</button>
+            <button class="primary-button" id="open-create-button">
+              <span>+</span> New onboarding
+            </button>
+          </div>
+        </header>
+
+        <section class="view active" id="dashboard-view">
+          <div class="hero-card">
+            <div>
+              <p class="eyebrow">Unified onboarding control plane</p>
+              <h3>Good morning, Amelia.</h3>
+              <p>
+                Standard cases are flowing automatically. Three cases need a
+                human decision today.
+              </p>
+            </div>
+            <div class="hero-chip">
+              <span class="pulse"></span>
+              Patronum AI healthy
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card">
+              <div class="metric-label"><span>Active cases</span><b>↗</b></div>
+              <strong>1,248</strong>
+              <p><em>+12%</em> versus last month</p>
+            </article>
+            <article class="metric-card">
+              <div class="metric-label"><span>Straight-through rate</span><b>◎</b></div>
+              <strong>71.8%</strong>
+              <p><em>+4.6 pts</em> automation gain</p>
+            </article>
+            <article class="metric-card">
+              <div class="metric-label"><span>Median activation time</span><b>◷</b></div>
+              <strong>14m 32s</strong>
+              <p><em>-38%</em> versus legacy baseline</p>
+            </article>
+            <article class="metric-card">
+              <div class="metric-label"><span>Data quality score</span><b>◇</b></div>
+              <strong>98.7%</strong>
+              <p><em>+1.3 pts</em> golden record quality</p>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel chart-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>Onboarding throughput</h3>
+                  <p>Completed cases · last 7 days</p>
+                </div>
+                <span class="select-like">Both markets⌄</span>
+              </div>
+              <div class="chart" aria-label="Onboarding throughput chart">
+                <div class="chart-scale"><span>1.5k</span><span>1k</span><span>500</span><span>0</span></div>
+                <div class="chart-bars">
+                  <div><i style="height: 61%"></i><small>Mon</small></div>
+                  <div><i style="height: 72%"></i><small>Tue</small></div>
+                  <div><i style="height: 67%"></i><small>Wed</small></div>
+                  <div><i style="height: 84%"></i><small>Thu</small></div>
+                  <div><i style="height: 77%"></i><small>Fri</small></div>
+                  <div><i style="height: 49%"></i><small>Sat</small></div>
+                  <div><i style="height: 42%"></i><small>Sun</small></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel region-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>Market split</h3>
+                  <p>Current active cases</p>
+                </div>
+              </div>
+              <div class="donut-wrap">
+                <div class="donut"><span>1,248<small>cases</small></span></div>
+                <div class="legend">
+                  <p><i class="legend-fr"></i><span>France</span><strong>68%</strong></p>
+                  <p><i class="legend-au"></i><span>Australia</span><strong>32%</strong></p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Cases requiring attention</h3>
+                <p>Prioritized by Patronum risk signals</p>
+              </div>
+              <button class="text-button" data-switch-view="reviews">View review queue →</button>
+            </div>
+            <div class="table-wrap" id="attention-table"></div>
+          </section>
+        </section>
+
+        <section class="view" id="cases-view">
+          <div class="content-heading">
+            <div>
+              <p class="eyebrow">One golden customer record</p>
+              <h3>Onboarding cases</h3>
+              <p>Track intake, KYC validation and service activation.</p>
+            </div>
+            <label class="search-box">
+              <span>⌕</span>
+              <input id="case-search" placeholder="Search case, name or market" />
+            </label>
+          </div>
+          <section class="panel">
+            <div class="filter-row">
+              <button class="filter-button active" data-filter="all">All cases</button>
+              <button class="filter-button" data-filter="Review">Needs review</button>
+              <button class="filter-button" data-filter="Approved">Approved</button>
+              <button class="filter-button" data-filter="Processing">Processing</button>
+            </div>
+            <div class="table-wrap" id="cases-table"></div>
+          </section>
+        </section>
+
+        <section class="view" id="reviews-view">
+          <div class="content-heading">
+            <div>
+              <p class="eyebrow">Human-in-the-loop controls</p>
+              <h3>Compliance review queue</h3>
+              <p>Validate sensitive decisions before service activation.</p>
+            </div>
+            <span class="queue-summary"><b id="queue-count">3</b> decisions pending</span>
+          </div>
+          <div class="review-layout">
+            <section class="panel review-list" id="review-list"></section>
+            <section class="panel review-detail" id="review-detail"></section>
+          </div>
+        </section>
+
+        <section class="view" id="governance-view">
+          <div class="content-heading">
+            <div>
+              <p class="eyebrow">Golden customer record</p>
+              <h3>Data governance</h3>
+              <p>Accountable ownership, lineage and privacy controls.</p>
+            </div>
+            <span class="hero-chip"><span class="pulse"></span> Controls active</span>
+          </div>
+          <div class="governance-grid">
+            <article class="panel domain-card">
+              <div class="domain-icon">C</div>
+              <h3>Customer domain</h3>
+              <p>Identity, contact details, consent and residency.</p>
+              <dl><dt>Owner</dt><dd>Chief Customer Officer</dd><dt>Quality</dt><dd>99.2%</dd></dl>
+            </article>
+            <article class="panel domain-card">
+              <div class="domain-icon">K</div>
+              <h3>Compliance domain</h3>
+              <p>KYC evidence, Patronum results and decisions.</p>
+              <dl><dt>Owner</dt><dd>Compliance Director</dd><dt>Quality</dt><dd>98.4%</dd></dl>
+            </article>
+            <article class="panel domain-card">
+              <div class="domain-icon">E</div>
+              <h3>Contract domain</h3>
+              <p>Offer, premise, service and activation status.</p>
+              <dl><dt>Owner</dt><dd>Retail Operations Lead</dd><dt>Quality</dt><dd>98.6%</dd></dl>
+            </article>
+          </div>
+          <section class="panel lineage-panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Trusted data lineage</h3>
+                <p>Every decision remains traceable and audit-ready.</p>
+              </div>
+            </div>
+            <div class="lineage-flow">
+              <div><b>01</b><strong>Customer intake</strong><span>Encrypted form</span></div>
+              <i>→</i>
+              <div><b>02</b><strong>Patronum analysis</strong><span>Explainable AI</span></div>
+              <i>→</i>
+              <div><b>03</b><strong>Golden record</strong><span>Validated data</span></div>
+              <i>→</i>
+              <div><b>04</b><strong>Audit evidence</strong><span>Immutable log</span></div>
+            </div>
+          </section>
+          <section class="panel audit-panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Immutable audit evidence</h3>
+                <p id="audit-chain-status">Checking audit hash chain...</p>
+              </div>
+              <button class="text-button" id="refresh-audit-button">Refresh evidence →</button>
+            </div>
+            <div class="table-wrap" id="audit-table"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop hidden" id="create-modal">
+      <section class="modal">
+        <header class="modal-header">
+          <div>
+            <p class="eyebrow">Secure intake</p>
+            <h3>New onboarding case</h3>
+          </div>
+          <button class="close-button" id="close-create-button" aria-label="Close">×</button>
+        </header>
+        <div class="stepper">
+          <div class="step active" data-step-marker="1"><b>1</b><span>Customer</span></div>
+          <i></i>
+          <div class="step" data-step-marker="2"><b>2</b><span>Evidence</span></div>
+          <i></i>
+          <div class="step" data-step-marker="3"><b>3</b><span>Patronum</span></div>
+        </div>
+
+        <form id="onboarding-form">
+          <div class="form-step active" data-step="1">
+            <div class="form-grid">
+              <label><span>Full name</span><input required name="fullName" placeholder="e.g. Camille Laurent" /></label>
+              <label><span>Email address</span><input required name="email" type="email" placeholder="name@example.com" /></label>
+              <label><span>Country</span><select required name="country"><option value="FR">France</option><option value="AU">Australia</option></select></label>
+              <label><span>Customer type</span><select required name="customerType"><option>Individual</option><option>Small business</option></select></label>
+              <label class="wide"><span>Service address</span><input required name="address" placeholder="Street, city, postal code" /></label>
+            </div>
+          </div>
+          <div class="form-step" data-step="2">
+            <div class="upload-zone">
+              <div class="upload-icon">↑</div>
+              <h4>Identity evidence</h4>
+              <p>Drag documents here or simulate a secure upload.</p>
+              <button type="button" class="secondary-button" id="simulate-upload">Simulate document upload</button>
+            </div>
+            <div class="uploaded-file hidden" id="uploaded-file">
+              <span class="file-icon">PDF</span>
+              <span><strong>identity_document.pdf</strong><small>Encrypted · 1.8 MB · malware scan passed</small></span>
+              <b>✓</b>
+            </div>
+          </div>
+          <div class="form-step" data-step="3">
+            <div class="ai-loading" id="ai-loading">
+              <div class="loader"></div>
+              <h4>Patronum is analyzing the evidence</h4>
+              <p>Document authenticity · identity match · risk screening</p>
+            </div>
+            <div class="ai-result hidden" id="ai-result">
+              <div class="ai-score"><strong>96</strong><span>Confidence score</span></div>
+              <div>
+                <p class="eyebrow">Patronum recommendation</p>
+                <h4>Standard case · eligible for auto-approval</h4>
+                <ul>
+                  <li>Document authenticity checks passed</li>
+                  <li>No sanctions or duplicate identity match</li>
+                  <li>Identity fields extracted with high confidence</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <footer class="modal-footer">
+            <button type="button" class="secondary-button hidden" id="previous-step">Back</button>
+            <span></span>
+            <button type="button" class="primary-button" id="next-step">Continue</button>
+          </footer>
+        </form>
+      </section>
+    </div>
+
+    <div class="toast hidden" id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
